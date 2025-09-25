@@ -11,7 +11,7 @@
   },
   "keywords": [],
   "author": "fas",
-  "license": "CC BY 4.0",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^22.14.0",
     "@types/webpack-env": "^1.18.8",
