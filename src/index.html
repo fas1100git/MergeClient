@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Union</title>
+
+    <meta name="viewport" content="minimal-ui=true, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width, viewport-fit=cover" />
+
+    <!-- Задает стиль панели состояния при полноэкранном режиме -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Задает стиль панели состояния при полноэкранном режиме -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Отключить преобразование телефонного номера в ссылку -->
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="theme-color" content="#042440">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="msapplication-navbutton-color" content="#042440">
+
+    <!-- #!if platform === 'yandex'-->
+    <script src="/sdk.js"></script>
+    <!-- #!endif -->
+    <!-- #!if platform === 'telegram'-->
+    <script src="https://telegram.org/js/telegram-web-app.js?57" defer></script>
+    <!-- #!endif -->
+</head>
+
+<body>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- #!if target === 'debug' -->
+    <!--<div id="erudaElement"></div>
+    <script src="eruda.js"></script>
+    <script>
+        eruda.init({
+            container: document.getElementById('erudaElement'),
+            tool: ['console', 'elements']
+        });
+    </script>-->
+    <!-- #!endif -->
+
+</body>
+</html>
