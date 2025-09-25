@@ -108,9 +108,11 @@ export default class SceneManager {
         const borderWidth = landscape ? GAME_VIRTUAL_SIZE_LONG : GAME_VIRTUAL_SIZE_SHORT;
         const borderHeight = landscape ? GAME_VIRTUAL_SIZE_SHORT : GAME_VIRTUAL_SIZE_LONG;
 
+        // #!if target === 'debug'
         this.borderGrapgics.clear();
         this.borderGrapgics.rect(0, 0, borderWidth, borderHeight);
         this.borderGrapgics.stroke({ color: 0xff0303, width: 10 });
+        // #!endif
     }
 
     static setScene(scene: IScene) {

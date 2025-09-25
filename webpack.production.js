@@ -15,7 +15,7 @@ const preprocessor = {
         },
         params: {
             target: 'releace',    // debug, releace
-            platform: 'telegram',   // none, yandex, inplay, telegram
+            platform: 'yandex',   // none, yandex, inplay, telegram
         },
         verbose: false,
     },

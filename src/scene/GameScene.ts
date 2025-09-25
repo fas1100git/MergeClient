@@ -56,7 +56,12 @@ export default class GameScene implements IScene {
         const background = new PIXI.Graphics();
         background.roundRect(0, 0, 800, 800, 50)
             .fill({ color: GAME_BACKGROUND_COLOR, alpha: 0.7 });
-        background.x = 400;
+
+        background.x = x;
+        background.y = y;
+
+        background.pivot.x = background.width / 2;
+        background.pivot.y = background.height / 2;
 
         this.view.addChild(background);
 

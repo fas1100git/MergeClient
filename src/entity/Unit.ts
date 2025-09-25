@@ -19,8 +19,8 @@ export default class Unit {
         this.targetVector.x = x - this.graphics.position.x;
         this.targetVector.y = y - this.graphics.position.y;
 
-        if (isNaN(x))
-            debugger;
+        if (this.targetVector.magnitude() == 0)
+            return;
 
         this.distance = Math.sqrt(this.targetVector.x * this.targetVector.x + this.targetVector.y * this.targetVector.y);
 
