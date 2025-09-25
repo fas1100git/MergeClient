@@ -1,8 +1,9 @@
 
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const preprocessor = {
@@ -81,6 +82,14 @@ module.exports = {
             filename: 'index.html', // Название выходного файла
             hash: true,             // Добавление уникального параметра для отчистки кэша
         }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: 'src/image/**/*', // путь к исходным изображениям
+                    to: 'image/[name][ext]', // путь в выходной директории
+                }
+            ]
+        })
         /*new BundleAnalyzerPlugin(),*/
     ],
 }

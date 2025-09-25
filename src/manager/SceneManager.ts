@@ -1,6 +1,6 @@
 import * as PIXI from 'pixi.js';
 
-import DataManager, { GAME_VIRTUAL_SIZE_LONG, GAME_VIRTUAL_SIZE_SHORT } from '../manager/DataManager';
+import DataManager, { GAME_VIRTUAL_SIZE_LONG, GAME_VIRTUAL_SIZE_SHORT } from './DataManager';
 import { IScene } from '../scene/Scene';
 import { throttle } from '../other/Throttle';
 
