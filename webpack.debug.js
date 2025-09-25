@@ -1,5 +1,6 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const preprocessor = {
@@ -32,7 +33,7 @@ module.exports = {
         //    fs: false,
         //    path: false
         //},
-       /* alias: { '@pixi': 'pixi.js/node_modules/@pixi' }*/
+        /* alias: { '@pixi': 'pixi.js/node_modules/@pixi' }*/
     },
     module: {
         rules: [
@@ -65,6 +66,14 @@ module.exports = {
             title: 'webpack.config.js',
             template: path.resolve(__dirname, './src/index.html'), // шаблон
             filename: 'index.html', // название выходного файла
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: 'src/image/**/*', // путь к исходным изображениям
+                    to: 'image/[name][ext]', // путь в выходной директории
+                }
+            ]
         })
     ],
 
